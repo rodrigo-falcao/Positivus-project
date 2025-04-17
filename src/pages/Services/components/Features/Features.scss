@@ -1,0 +1,114 @@
+@use '../../../../main.scss' as main;
+
+
+.engine-container {
+    background-color: main.$terciary-color;
+    color: main.$primary-color;
+    padding: 50px 30px;
+    border-radius: 45px;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 100px;
+    padding-left: 50px;
+
+    .engine-title {
+        h3 {
+            font-size: 30px;
+            border-radius: 5px;
+            background-color: main.$secondary-color;
+            color: main.$terciary-color;
+            padding: 10px;
+            margin: 0;
+        }
+        img {
+            position: absolute;
+            top: 50px; 
+            left: 30px; 
+            width: 30px; 
+            height: auto;
+        }
+    }
+    .engine-text {
+        max-width: 60%;
+        p {
+            font-size: 20px;
+            padding-bottom: 20px;
+            margin: 0;
+        }
+    }
+}
+
+// CARDS SECTION
+
+.engine-cards {
+    padding-top: 80px;
+    gap: 40px;
+    .engine-card {
+        background-color: main.$text-background-color;
+        border-radius: 45px;
+        color: main.$terciary-color;
+        box-sizing: border-box;
+        padding: 40px;
+        width: 100%;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        
+        img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .engine-text {
+            padding: 0 40px ;
+            h3 {
+                font-size: 30px;
+            }
+        }
+        &:hover {
+            background-color: main.$secondary-color; 
+            transform: translateY(-10px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .engine-container {
+        flex-direction: column;
+        .engine-title {
+            padding-left: 50px;
+            width: 100%;
+            h3 {
+                padding: 0;
+                font-size: 25px;
+                background-color: transparent;
+                color: main.$primary-color;
+            }
+        }
+        .engine-text {
+            padding-left: 50px;
+            max-width: 100%;
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+    .engine-cards {
+        gap: 20px;
+        .engine-card {
+            padding: 20px;
+            width: 100%;
+            
+            img {
+                width: 100px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            .engine-text {
+                padding: 0 40px ;
+                h3 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    
+}

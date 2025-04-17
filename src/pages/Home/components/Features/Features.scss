@@ -1,0 +1,145 @@
+@use '../../../../main.scss' as main;
+
+.features-content {
+    background-color: main.$text-background-color;
+    border-radius: 35px;
+    margin: 130px auto;
+    height: 300px;
+
+    .features-text {
+        padding: 30px;
+        h3 {
+            font-size: 30px;
+        }
+        p {
+            max-width: 65%;
+            font-size: 15px;
+        }
+    }
+
+    img {
+        height: 120%;
+        width: auto;
+    }
+    
+} 
+
+.case-stories {
+    background-color: main.$terciary-color;
+    color: main.$primary-color;
+    gap: 2rem;
+    padding: 50px;
+    border-radius: 35px;
+    margin: 100px auto;
+    box-sizing: border-box;
+    .case-story {
+        flex: 1;
+        margin: 0 1rem;
+        padding: 20px;
+        text-align: left;
+        border-right: 1px solid rgba(255, 255, 255, 0.205); 
+
+        h3 {
+            height: 40px;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+        .btn-case {
+            p {
+                color: main.$secondary-color;
+            }
+            button {
+                border: none;
+                background-color: transparent;
+                img {
+                    transition: transform 0.3s ease;
+                }
+                &:hover {
+                    img {
+                        transform: rotate(30deg); 
+                    }
+                }
+            }
+            img {
+                transition: transform 0.3s ease;
+            }
+            &:hover {
+                img {
+                    transform: rotate(30deg); 
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .features-content {
+        margin: 100px auto;
+        height: 220px;
+
+        .features-text {
+            padding: 20px;
+            h3 {
+                font-size: 20px;
+            }
+            p {
+                max-width: 100%;
+                font-size: 12px;
+            }
+        }
+
+        img {
+            height: 130%;
+            width: 100%;
+        }
+    }
+    .case-stories {
+        flex-direction: column;
+        margin: 50px auto;
+        .case-story {
+            border-right: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.205); ;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .features-content {
+        margin: 30px auto;
+        height: auto;
+        width: 80%;
+        .features-text {
+            padding: 15px;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            h3 {
+                font-size: 26px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+        img {
+            display: none;
+        }
+    }
+    .case-stories {
+        padding: 20px;
+        margin: 30px auto;
+        .case-story {
+            padding: 10px;
+            border-right: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.205); ;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

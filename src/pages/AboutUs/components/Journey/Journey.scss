@@ -1,0 +1,134 @@
+@use '../../../../main.scss' as main;
+
+.journey-container {
+    position: relative;
+    background-color: main.$text-background-color;
+    background-image: url(../../../../assets/about/img-years.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    color: main.$terciary-color;
+    padding: 60px 100px;
+    border-radius: 45px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.journey-years {
+    position: relative;
+    gap: 20px;
+    h3 {
+        font-size: 40px;
+    }
+    &:nth-child(2),
+    &:last-child {
+        display: flex;
+        justify-content: end;
+    }
+    .journey-card {
+        position: relative;
+        background-color: main.$terciary-color;
+        color: main.$primary-color;
+        border-radius: 25px;
+        padding: 45px;
+        box-sizing: border-box;
+        width: 500px;
+        gap: 20px;
+        transition: all 0.3s ease-in-out;
+
+        h3 {
+            font-size: 25px;
+        }
+        img {
+            position: absolute; 
+            top: 20px; 
+            left: 25px; 
+            width: 20px; 
+            z-index: 10; 
+            pointer-events: none; 
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+    &:hover {
+        .journey-years {
+            h3 {
+                color: main.$secondary-color;
+                
+            }
+        }
+        .journey-card {
+            background-color: main.$secondary-color;
+            transition: all 0.3s ease-in-out;
+            color: main.$terciary-color;
+            img {
+                content: url('../../../../assets/about/vector-black.svg');
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .journey-container {
+        align-items: center;
+        width: 90%;
+        padding: 20px;
+        .journey-years {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            &:nth-child(2),
+            &:last-child {
+                justify-content: center;
+                align-items: center;
+            }
+            .journey-card {
+                width: 100%;
+                padding: 35px;
+                img {
+                    position: absolute; 
+                    top: 15px; 
+                    left: 15px; 
+                    width: 20px; 
+                    z-index: 10; 
+                    pointer-events: none;
+                }
+                h3 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .journey-container {
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        .journey-years {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            &:nth-child(2),
+            &:last-child {
+                justify-content: center;
+                align-items: center;
+            }
+            .journey-card {
+                width: 100%;
+                padding: 25px;
+                h3 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

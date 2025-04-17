@@ -1,0 +1,175 @@
+@use '../../main.scss' as main;
+
+.footer-container {
+    background-color: main.$terciary-color;
+    color: main.$primary-color;
+    padding: 30px 50px;
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+    box-sizing: border-box;
+    .footer-list {
+        list-style: none;
+        gap: 1.2rem;
+        transition: all 0.2s ease-in-out;
+        a{
+            color: main.$primary-color;
+            text-decoration: none;
+            &:hover {
+                color: main.$secondary-color;
+            }
+        }
+        
+    }
+    .social-list {
+        list-style: none;
+        gap: 1.2rem;
+    }
+}
+
+.footer-contact {
+    padding: 50px 0;
+    text-align: left;
+    border-bottom: 1px solid main.$primary-color;
+    .list-contact {
+        width: 45%;
+        h3 {
+            border-radius: 5px;
+            padding: 5px;
+            display: inline-block;
+            color: main.$terciary-color;
+            background-color: main.$secondary-color;
+            margin-bottom: 0.4rem;
+        }
+    }
+    .input-footer {
+        padding: 20px;
+        border-radius: 25px;
+        background-color: main.$background-input-footer;
+        width: 50%;
+        height: 130px;
+        input {
+            padding: 10px;
+            height: 30px;
+            width: 50%;
+            border-radius: 10px;
+            border: 0.002rem solid main.$primary-color;
+            background-color: main.$background-input-footer;
+            color: main.$primary-color;
+            font-size: 1.0rem;
+            font-family: main.$font-family;
+            &::placeholder {
+                color: main.$primary-color; 
+                font-family: main.$font-family;
+            }
+        }
+        .btn-footer {
+            width: 40%;
+        }
+    }
+}
+
+.copy-footer {
+    margin-top: 30px;
+    gap: 1.6rem;
+    font-weight: 400;
+}
+
+// -- Tablet styles --
+
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 20px 30px;
+        margin: 0 10px;
+        .header-footer {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .footer-list {
+            gap: 0.8rem;
+            a {
+                font-size: 0.9rem;
+            }
+            svg {
+                font-size: 1.2rem;
+            }
+        }
+        .footer-contact {
+            padding: 30px 0;
+            flex-direction: column;
+            align-items: center;
+            .list-contact {
+                width: 100%;
+    
+                h3 {
+                    font-size: 1rem;
+                    padding: 3px;
+                }
+            }
+    
+            .input-footer {
+                width: 100%;
+                height: auto;
+                padding: 15px;
+                flex-direction: column;
+                margin-top: 25px;
+                input {
+                    width: 67%;
+                    font-size: 0.9rem;
+                }
+    
+                .btn-footer {
+                    width: 50%;
+                    margin-top: 10px;
+                }
+            }   
+        }
+        .copy-footer {
+            flex-direction: column;
+            text-align: center;
+            gap: 0rem;
+            margin-top: 0;
+        }
+    }
+    }
+
+
+
+// -- Mobile styles --
+
+@media (max-width: 480px) {
+    .footer-container {
+        .footer-list {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-left: 0;
+        }
+        .footer-contact {
+            padding: 20px 0;
+            text-align: center;
+            .list-contact {
+                h3 {
+                    font-size: 0.9rem;
+                }
+            }
+            .input-footer {
+                padding: 10px;
+                input {
+                    font-size: 0.9rem;
+                }
+            }
+            .btn-footer {
+                width: 60%;
+                padding: 15px;
+                font-size: 0.9rem;
+                white-space: nowrap;
+            }
+        }
+        .copy-footer {
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+    }
+    }
+

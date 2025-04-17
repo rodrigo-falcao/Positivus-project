@@ -1,0 +1,51 @@
+@use '../../../../main.scss' as main;
+
+.card-footer-content {
+    background-color: main.$secondary-color;
+    border-radius: 35px;
+    margin: 130px auto;
+    height: 300px;
+
+    .card-footer-content {
+        padding: 30px;
+        h3 {
+            font-size: 30px;
+        }
+        p {
+            max-width: 65%;
+            font-size: 15px;
+        }
+    }
+
+    img {
+        height: 120%;
+        width: auto;
+    }  
+} 
+
+@media (max-width: 768px) {
+    .card-footer-content {
+        margin: 100px auto;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid main.$terciary-color;
+        box-shadow: 0 4px 1px rgba(0, 0, 0);
+
+        .card-footer-content {
+            padding: 20px;
+            h3 {
+                font-size: 20px;
+            }
+            p {
+                max-width: 100%;
+                font-size: 12px;
+            }
+        }
+
+        img {
+            height: auto;
+            width: 70%;
+        }
+    }
+}

@@ -1,0 +1,245 @@
+@use '../../../../main.scss' as main;
+
+.featured-container {
+    background-color: main.$terciary-color;
+    color: main.$primary-color;
+    padding: 50px;
+    border-radius: 45px;
+    box-sizing: border-box;
+
+    .featured-text {
+        max-width: 45%;
+        h3 {
+            display: inline-block;
+            color: main.$terciary-color;
+            background-color: main.$secondary-color;
+            padding: 0 5px;
+            border-radius: 5px;
+            font-size: 40px;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+        h4 {
+            font-size: 25px;
+            padding: 10px 0;
+            max-width: 70%;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        p { 
+            font-size: 18px;
+            padding: 20px 0;
+            color: main.$text-background-color;
+            font-weight: 100;
+        }
+        .btn-text {
+            p {
+                color: main.$secondary-color;
+            }
+            button {
+                border: none;
+                background-color: transparent;
+                img {
+                    transition: transform 0.3s ease;
+                }
+                &:hover {
+                    img {
+                        transform: rotate(30deg); 
+                    }
+                }
+            }
+            img {
+                transition: transform 0.3s ease;
+            }
+            &:hover {
+                img {
+                    transform: rotate(30deg); 
+                }
+            }
+        }
+    }
+    .featured-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 40%;
+        margin-left: auto;
+        
+        .featured-card {
+            background-color: main.$primary-color;
+            border-radius: 25px;
+            color: main.$terciary-color;
+            text-align: center;
+            padding: 20px 0; 
+            min-height: 200px;
+
+            h3 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// case-stories area
+
+.case-cards {
+    background-color: main.$primary-color;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid main.$terciary-color;
+    border-radius: 45px;
+    padding: 40px 20px;
+
+    .case-card {
+        text-align: center;
+        border-right: 1px solid main.$terciary-color;
+        border-bottom: 1px solid main.$terciary-color; 
+        padding: 0;
+        text-align: center;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        padding-top: 20px 40px;
+        text-align: left;
+        
+        h3 {
+            font-size: 25px;
+            padding: 20px 40px;
+        }
+        p {
+            font-size: 16px;
+            padding: 0 40px;
+        }
+        &:last-child {
+            border-right: none; 
+        }
+        &:nth-child(3n) {
+            border-right: none; 
+        }
+        &:nth-last-child(-n + 3) {
+            border-bottom: none; 
+        }
+        .btn-case-card {
+            margin: 0 20px;
+            p {
+                color: main.$terciary-color;
+            }
+            button {
+                padding-right: 0;
+                border: none;
+                background-color: transparent;
+                img {
+                    transition: transform 0.3s ease;
+                }
+                &:hover {
+                    img {
+                        transform: rotate(30deg); 
+                    }
+                }
+            }
+            img {
+                transition: transform 0.3s ease;
+            }
+            &:hover {
+                img {
+                    transform: rotate(30deg); 
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-container {
+        flex-direction: column;
+        align-items: center;
+
+        .featured-text {
+            max-width: 100%;
+            text-align: center;
+            h3 {
+                font-size: 30px;
+            }
+            h4 {
+                font-size: 20px;
+                max-width: 100%;
+            }
+            p {
+                font-size: 16px;
+                width: 100%;
+            }
+        }
+
+        .featured-cards {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 100%;
+            margin: 20px 0;
+        }
+    }
+    .case-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0px;
+        padding: 20px;
+
+        .case-card {
+            h3 {
+                font-size: 22px; // Reduz o tamanho do título
+                padding: 15px 20px;
+            }
+            p {
+                font-size: 14px; // Reduz o tamanho do texto
+                padding: 0 20px;
+            }
+            &:nth-child(2n) {
+                border-right: none; 
+            }
+            &:nth-child(3n) {
+                border-right: 1px solid main.$terciary-color; 
+            }
+            &:nth-child(4n) {
+                border-bottom: 1px solid main.$terciary-color; 
+            }
+            &:nth-child(6n) {
+                border-right: none; 
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .case-cards {
+        grid-template-columns: 1fr; 
+        gap: 15px; 
+        padding: 10px;
+        border: none;
+
+        .case-card {
+            box-shadow: 0 4px 1px rgba(0, 0, 0);
+            border: 1px solid main.$terciary-color;
+            border-radius: 25px;
+            h3 {
+                font-size: 20px; // Ajusta o tamanho do título
+                padding: 10px 15px;
+            }
+            p {
+                font-size: 14px; // Ajusta o tamanho do texto
+                padding: 0 15px;
+            }
+            &:nth-child(2n) {
+                border-right: 1px solid main.$terciary-color;
+            }
+            &:nth-child(3n) {
+                border-right: 1px solid main.$terciary-color; 
+            }
+            &:nth-child(4n) {
+                border-bottom: 1px solid main.$terciary-color; 
+            }
+            &:nth-child(6n) {
+                border-right: 1px solid main.$terciary-color;
+            }
+        }
+    }
+}

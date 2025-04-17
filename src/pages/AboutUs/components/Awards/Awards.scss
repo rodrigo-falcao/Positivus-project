@@ -1,0 +1,231 @@
+@use '../../../../main.scss' as main;
+
+.Awards {
+    padding-bottom: 100px;
+}
+
+.president-title {
+    background-color: main.$terciary-color;
+    border-radius: 45px;
+    color: main.$primary-color;
+    box-sizing: border-box;
+    img {
+        top: -50px;
+        position: relative;
+        width: 100%;
+        width: 40%;
+    }
+    .president-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        h3 {
+            max-width: 80%;
+            font-size: 45px;
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-weight: 300; 
+            color: main.$text-background-color; 
+            padding-top: 20px; 
+            text-align: left; 
+            width: 80%;
+        }
+    }
+}
+
+// CARDS AREA
+.awards-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 100px;
+
+    .awards-card {
+        background-color: main.$text-background-color;
+        border-radius: 45px;
+        color: main.$terciary-color;
+        box-sizing: border-box;
+        padding: 30px;
+        width: 100%;
+        min-height: 550px;
+        transition: background-color 0.3s ease-in-out; 
+        img {
+            width: 80%;
+            height: auto;
+        }
+        &:hover {
+            background-color: main.$secondary-color;
+        }
+        .awards-text {
+            h3 {
+                min-height: 80px;
+                height: auto;
+                width: auto;
+            }
+            p {
+                font-size: 18px;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+// CAREER JOIN AREA
+
+.awards-carres {
+    background-color: main.$secondary-color;
+    border-radius: 45px;
+    border: 1px solid main.$terciary-color;
+    padding-bottom: 120px;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 1px rgba(0, 0, 0);
+    .awards-carres-text {
+        width: 40%;
+        h3 {
+            font-size: 40px;
+            padding-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            padding-top: 20px;
+        }
+    }
+    img {
+        width: 60%;
+        max-width: 350px;
+        height: auto;
+    }
+}
+
+@media (max-width: 769px) {
+    .president-title {
+        img {
+            top: -25px;
+            width: 50%;
+        }
+        .president-text {
+            padding: 20px 0;
+            h3 {
+                font-size: 25px
+            }
+            p {
+                font-size: 16px;
+                width: 80%;
+            }
+        }
+    }
+    .awards-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        padding: 20px 0;
+        gap: 40px;
+        padding-bottom: 80px;
+    }
+    .awards-text {
+        h3 {
+            height: 120px;
+            width: auto;
+        }
+        p {
+            font-size: 16px;
+            height: auto;
+        }
+    }
+
+    // CAREER JOIN AREA
+
+    .awards-carres {
+        padding-bottom: 80px;
+        padding: 20px;
+        .awards-carres-text {
+            width: 40%;
+            h3 {
+                font-size: 30px;
+                padding-bottom: 0px;
+            }
+            p {
+                font-size: 16px;
+                padding-top: 20px;
+            }
+        }
+        img {
+            width: 60%;
+            max-width: 350px;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .president-title {
+        flex-direction: column;
+        img {
+            width: 60%;
+        }
+        .president-text {
+            h3 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 16px;
+                width: 60%;
+            }
+        }
+    }
+    .awards-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 10px;
+        .awards-card {
+            background-color: main.$text-background-color;
+            border-radius: 45px;
+            color: main.$terciary-color;
+            box-sizing: border-box;
+            padding: 10px;
+            width: 100%;
+            min-height: 550px;
+            transition: background-color 0.3s ease-in-out; 
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .awards-text {
+                h3 {
+                    min-height: 120px;
+                    height: auto;
+                    width: auto;
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 18px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .awards-carres {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 80px;
+        .awards-carres-text {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            margin-top: 50px;
+        }
+    }
+}
