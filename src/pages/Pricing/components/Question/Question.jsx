@@ -1,8 +1,5 @@
 import React from 'react';
 
-// ASSETS
-import './Question.scss';
-
 // COMPONENTS
 import WorkingCards from '../../../../components/WorkingCards/WorkingCards';
 

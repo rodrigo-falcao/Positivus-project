@@ -29,7 +29,13 @@
             padding: 20px 0;
         }
     }
+    .hero-blog {
+        h1 {
+            font-size: 35px;
+        }
+    }
 }
+
 
 @media (max-width: 768px) {
     .hero-section {
@@ -37,6 +43,7 @@
         padding: 50px;
         align-items: center;
         background-color: main.$primary-color;
+        flex-direction: column-reverse; 
         .hero-content {
             width: 100%;
             padding: 0;
