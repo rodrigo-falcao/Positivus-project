@@ -8,6 +8,7 @@ import Footer from '../../components/Footer/Footer';
 
 // ASSETS
 import ImgHeroBlog from '../../assets/home/img-hero.svg';
+import Textblog from './Components/Textblog/Textblog';
 
 const Blog = () => {
     return (
@@ -19,6 +20,7 @@ const Blog = () => {
                 description="PPC and organic marketing each offer unique benefits for driving traffic and growing your business. Discover which strategy aligns best with your goals and how to strike the perfect balance."
                 imgHero={ImgHeroBlog}
             />
+            <Textblog />
             <Footer />
         </div>
     );
