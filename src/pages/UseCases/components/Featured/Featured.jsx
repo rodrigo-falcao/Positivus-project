@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 
 // ASSETS
 import './Featured.scss';
-
 import ArrowGren from '../../../../assets/arrow-background-green.svg';
 import Button from '../../../../components/Button/Button';
+
+// COMPONENTS
+import CasesCards from '../../../../components/CasesCards/CasesCards';
 
 const Featured = () => {
     const caseData = [
@@ -77,19 +79,7 @@ const Featured = () => {
                     Success through Our Case Studies
                 </p>
             </div>
-            <div className='case-cards'>
-                {caseData.map((caseItem, index) => (
-                    <div className='case-card' key={index}>
-                        <h3>{caseItem.title}</h3>
-                        <p>{caseItem.description}</p>
-                        <Link to='/' className='d-flex btn-case-card al-center'>
-                            <Button><img src={ArrowGren} alt=""/></Button>
-                            <p>Learn More</p>
-                        </Link>
-                    </div>
-                ))}
-
-            </div>
+            <CasesCards data={caseData} />
         </div>
         </>
     );

@@ -8,12 +8,14 @@ import Services from './pages/Services/Services'
 import UseCases from './pages/UseCases/UseCases'
 import Pricing from './pages/Pricing/Pricing'
 import Blog from './pages/Blog/Blog'
+import ScrollToTop from './utils/ScrollToTop'
 
 
 function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />

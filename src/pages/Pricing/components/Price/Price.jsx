@@ -61,7 +61,7 @@ const Price = () => {
                 {priceData.map((plan, index) => (
                     <div className="price-card d-flex flex-column jc-center" key={index}>
                         <h3 className="price-card-title">{plan.title}</h3>
-                        <img className='price-img-popular' src={plan.img} alt="" />
+                        {plan.img && <img className='price-img-popular' src={plan.img} alt="" />}
                         <div className='price-card-cost d-flex al-baseline '>
                             <h3 className="price-card-price">${plan.price}</h3>
                             <p className="price-card-month">/month</p>
