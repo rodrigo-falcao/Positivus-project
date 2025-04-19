@@ -20,6 +20,7 @@
         margin: auto;
         box-shadow: 0 4px 1px rgba(0, 0, 0);
         border: 1px solid main.$terciary-color;
+        transition: all 0.3s ease;
         .core-value-text {
             h3 {
                 font-size: 25px;
@@ -35,6 +36,15 @@
             max-height: 162px;
             width:  auto;
             max-width: 50%;
+        }
+        &:hover {
+            transform: translateY(-10px);
+            color: main.$primary-color;
+            background-color: main.$terciary-color;
+            transition: all 0.3s ease;
+            p {
+                border-top: 1px solid main.$primary-color;
+            }
         }
     }
 }

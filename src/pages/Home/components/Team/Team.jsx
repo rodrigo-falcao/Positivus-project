@@ -11,6 +11,44 @@ import ImgTeam6 from '../../../../assets/home/team-card6.svg'
 import logoLinkedin from '../../../../assets/home/logo-linkedin.svg'
 
 const Team = () => {
+    const teamMembersData = [
+        {
+            name: 'John Smith',
+            cargo: 'CEO and Founder',
+            img: ImgTeam1,
+            description: '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy',
+        },
+        {
+            name: 'Jane Doe',
+            cargo: 'Director of Operations',
+            img: ImgTeam2,
+            description: '7+ years of experience in project management and team leadership. Strong organizational and communication skills',
+        },
+        {
+            name: 'Michael Brown',
+            cargo: 'Senior SEO Specialist',
+            img: ImgTeam3,
+            description: '5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization',
+        },
+        {
+            name: 'Emily Johnson',
+            cargo: 'PPC Manager',
+            img: ImgTeam4,
+            description: '3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis',
+        },
+        {
+            name: 'Brian Willians',
+            cargo: 'Social Media Specialist',
+            img: ImgTeam5,
+            description: '4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement',
+        },
+        {
+            name: 'Sarah Kim',
+            cargo: 'Content Creator',
+            img: ImgTeam6,
+            description: '2+ years of experience in writing and editing Skilled in creating compelling, SEO-optimized content for various industries',
+        },
+    ]
 	return (
 		<>
 			<div className="container title-content d-flex al-center">
@@ -21,44 +59,7 @@ const Team = () => {
                 </p>
             </div>
             <div className='container team-cards d-grid al-center'>
-            {[
-                {
-                    name: 'John Smith',
-                    cargo: 'CEO and Founder',
-                    img: ImgTeam1,
-                    description: '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy',
-                },
-                {
-                    name: 'Jane Doe',
-                    cargo: 'Director of Operations',
-                    img: ImgTeam2,
-                    description: '7+ years of experience in project management and team leadership. Strong organizational and communication skills',
-                },
-                {
-                    name: 'Michael Brown',
-                    cargo: 'Senior SEO Specialist',
-                    img: ImgTeam3,
-                    description: '5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization',
-                },
-                {
-                    name: 'Emily Johnson',
-                    cargo: 'PPC Manager',
-                    img: ImgTeam4,
-                    description: '3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis',
-                },
-                {
-                    name: 'Brian Willians',
-                    cargo: 'Social Media Specialist',
-                    img: ImgTeam5,
-                    description: '4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement',
-                },
-                {
-                    name: 'Sarah Kim',
-                    cargo: 'Content Creator',
-                    img: ImgTeam6,
-                    description: '2+ years of experience in writing and editing Skilled in creating compelling, SEO-optimized content for various industries',
-                },
-            ].map((teamMember, index) => (
+            {teamMembersData.map((teamMember, index) => (
                 <div className="card-team" key={index}>
                     <div className='card-title d-flex jc-space-between'>
                         <div className='d-flex jc-flex-end'>

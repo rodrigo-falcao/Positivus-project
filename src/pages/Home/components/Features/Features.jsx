@@ -45,6 +45,25 @@ const Features = () => {
         },
     ];
 
+    const caseStoryData = [
+        {
+            title: 'For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.',
+            link: '/',
+            buttonText: 'Learn More',
+        },
+        {
+            title: 'For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.',
+            link: '/',
+            buttonText: 'Learn More',
+        },
+        {
+            title: 'For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales.',
+            link: '/',
+            buttonText: 'Learn More',
+        }
+
+    ]
+
     return (
         <>
             <div className='container features-content d-flex al-center jc-space-around'>
@@ -69,39 +88,17 @@ const Features = () => {
                 </div>
             </div>
             <div className='container case-stories d-flex al-center jc-space-between'>
-                <div className='case-story'>
-                    <p>
-                        For a local restaurant, we implemented a targeted PPC 
-                        campaign that resulted in a 50% increase in website 
-                        traffic and a 25% increase in sales.
-                    </p>
-                    <Link to='/' className='d-flex btn-case'>
-                        <p>Learn More</p>
-                        <Button><img src={ArrowGren} alt="" /></Button>
-                    </Link>
-                </div>
-                <div className='case-story'>
-                    <p>
-                        For a B2B software company, we developed an SEO strategy 
-                        that resulted in a first page ranking for key keywords 
-                        and a 200% increase in organic traffic.
-                    </p>
-                    <Link to='/' className='d-flex btn-case'>
-                        <p>Learn More</p>
-                        <Button><img src={ArrowGren} alt="" /></Button>
-                    </Link>
-                </div>
-                <div className='case-story'>
-                    <p>
-                        For a national retail chain, we created a social media 
-                        marketing campaign that increased followers by 25% and 
-                        generated a 20% increase in online sales.
-                    </p>
-                    <Link to='/' className='d-flex btn-case'>
-                        <p>Learn More</p>
-                        <Button><img src={ArrowGren} alt="" /></Button>
-                    </Link>
-                </div>
+                {caseStoryData.map((caseStory, index) => (
+                    <div className='case-story' key={index}>
+                        <p>
+                            {caseStory.title}
+                        </p>
+                        <Link to={caseStory.link} className='d-flex btn-case'>
+                            <p>{caseStory.buttonText}</p>
+                            <Button><img src={ArrowGren} alt="" /></Button>
+                        </Link>
+                    </div>
+                ))}
             </div>
             <div className="container title-content d-flex al-center">
                 <h3>Our Working Process </h3>

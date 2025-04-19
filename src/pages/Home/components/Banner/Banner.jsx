@@ -16,6 +16,38 @@ import ImgCard5 from '../../../../assets/home/img-card5.svg'
 import ImgCard6 from '../../../../assets/home/img-card6.svg'
 
 const Banner = () => {
+    const cardBannerData = [
+        {
+            title: 'Search engine optimization',
+            img: ImgCard1,
+            color: 'primary',
+        },
+        {
+            title: 'Pay-per-click adverting',
+            img: ImgCard2,
+            color: 'secondary',
+        },
+        {
+            title: 'Social Media Marketing',
+            img: ImgCard3,
+            color: 'tertiary',
+        },
+        {
+            title: 'Email Marketing',
+            img: ImgCard4,
+            color: 'primary',
+        },
+        {
+            title: 'Content Creation',
+            img: ImgCard5,
+            color: 'secondary',
+        },
+        {
+            title: 'Analytics and Tracking',
+            img: ImgCard6,
+            color: 'tertiary',
+        }
+    ]
     return (
         <>
         <div className='container title-content d-flex al-center'>
@@ -27,83 +59,22 @@ const Banner = () => {
                 </p>
             </div>
         </div>
-        <div className='container banner-cards d-grid al-center'>
-            <div className="card-banner d-flex al-center jc-space-between primary">
-                <div className='card-text d-flex flex-column jc-space-between'>
-                    <h3>Search engine optimization</h3>
-                    <div className='banner-btn d-flex al-center'>
-                        <Link className='d-flex' to='/'>
-                            <button><img src={ArrowGreen} alt="Arrow Green" /></button>
-                            <p>Learn more</p>
-                        </Link>
+        <div className='container'>
+            <div className='banner-cards d-grid al-center'>
+                {cardBannerData.map((card, index) => (
+                    <div className={`card-banner d-flex al-center jc-space-between ${card.color}`} key={index}>
+                        <div className='card-text d-flex flex-column jc-space-between'>
+                            <h3>{card.title}</h3>
+                            <div className='banner-btn d-flex al-center'>
+                                <Link className='d-flex' to='/'>
+                                    <Button><img src={ArrowGreen} alt="Arrow Green" /></Button>
+                                    <p>Learn more</p>
+                                </Link>
+                            </div>
+                        </div>
+                        <img src={card.img} alt="Image Card" className='banner-img'/>
                     </div>
-                </div>
-                <img src={ImgCard1} alt="Image Card" className='banner-img'/>
-            </div>
-
-            <div className="card-banner d-flex al-center jc-space-between secondary">
-                <div className='card-text d-flex flex-column jc-space-between'>
-                    <h3>Pay-per-click adverting</h3>
-                    <div className='banner-btn d-flex al-center'>
-                        <Link className='d-flex' to='/'>
-                            <Button><img src={ArrowGreen} alt="Arrow Green" /></Button>
-                            <p>Learn more</p>
-                        </Link>
-                    </div>
-                </div>
-                <img src={ImgCard2} alt="Image Card" className='banner-img'/>
-            </div>
-
-            <div className="card-banner d-flex al-center jc-space-between tertiary">
-                <div className='card-text d-flex flex-column jc-space-between'>
-                    <h3>Social Media Marketing</h3>
-                    <div className='banner-btn d-flex al-center'>
-                        <Link className='d-flex' to='/'>
-                            <Button><img src={ArrowWhite} alt="Arrow Green" /></Button>
-                            <p>Learn more</p>
-                        </Link>
-                    </div>
-                </div>
-                <img src={ImgCard3} alt="Image Card" className='banner-img'/>
-            </div>
-
-            <div className="card-banner d-flex al-center jc-space-between primary">
-                <div className='card-text d-flex flex-column jc-space-between'>
-                    <h3>Email Marketing</h3>
-                    <div className='banner-btn d-flex al-center'>
-                        <Link className='d-flex' to='/'>
-                            <Button><img src={ArrowGreen} alt="Arrow Green" /></Button>
-                            <p>Learn more</p>
-                        </Link>
-                    </div>
-                </div>
-                <img src={ImgCard4} alt="Image Card" className='banner-img'/>
-            </div>
-
-            <div className="card-banner d-flex al-center jc-space-between secondary">
-                <div className='card-text d-flex flex-column jc-space-between'>
-                    <h3>Content Creation</h3>
-                    <div className='banner-btn d-flex al-center'>
-                        <Link className='d-flex' to='/'>
-                            <Button><img src={ArrowGreen} alt="Arrow Green" /></Button>
-                            <p>Learn more</p>
-                        </Link>
-                    </div>
-                </div>
-                <img src={ImgCard5} alt="Image Card" className='banner-img'/>
-            </div>
-
-            <div className="card-banner d-flex al-center jc-space-between tertiary">
-                <div className='card-text d-flex flex-column jc-space-between'>
-                    <h3>Analytics and Tracking</h3>
-                    <div className='banner-btn d-flex al-center'>
-                        <Link className='d-flex' to='/'>
-                            <Button><img src={ArrowWhite} alt="Arrow Green" /></Button>
-                            <p>Learn more</p>
-                        </Link>
-                    </div>
-                </div>
-                <img src={ImgCard6} alt="Image Card" className='banner-img'/>
+                ))}
             </div>
         </div>
         </>
