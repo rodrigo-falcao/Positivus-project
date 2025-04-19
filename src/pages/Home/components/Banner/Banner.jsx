@@ -66,7 +66,7 @@ const Banner = () => {
                         <div className='card-text d-flex flex-column jc-space-between'>
                             <h3>{card.title}</h3>
                             <div className='banner-btn d-flex al-center'>
-                                <Link className='d-flex' to='/'>
+                                <Link className='d-flex' to='/services'>
                                     <Button><img src={ArrowGreen} alt="Arrow Green" /></Button>
                                     <p>Learn more</p>
                                 </Link>

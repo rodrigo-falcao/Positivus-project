@@ -48,6 +48,15 @@
                 padding: 10px 0;
             }
         }
+        &:hover {
+            transform: translateY(-10px);
+            color: main.$primary-color;
+            background-color: main.$terciary-color;
+            transition: all 0.3s ease;
+            .card-text {
+                border-top: 1px solid main.$primary-color;
+            }
+        }
     }
 }
 

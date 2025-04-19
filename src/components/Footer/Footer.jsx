@@ -17,6 +17,7 @@ const Footer = () => {
             <div className="header-footer d-flex al-center jc-space-between">
                 <Link to='/'> <img src={ImgLogo} alt="Logo" /></Link>
                 <ul className="footer-list d-flex al-center">
+                    <li><Link to='/'>Home</Link></li>
                     <li><Link to='/aboutus'>About Us</Link></li>
                     <li><Link to='/services'>Services</Link></li>
                     <li><Link to='/usecases'>Use Cases</Link></li>

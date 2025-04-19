@@ -74,7 +74,9 @@ const Features = () => {
                         digital marketing services can help your business 
                         grow and succeed online.
                     </p>
-                    <Button to='' buttonStyle='secondary'>Get your free proposal</Button>
+                    <Link to='/pricing'>
+                        <Button buttonStyle='secondary'>Get your free proposal</Button>
+                    </Link>
                 </div>
                 <img src={ImgFeatures} alt="Features" />
             </div>

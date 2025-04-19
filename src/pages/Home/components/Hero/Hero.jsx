@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 // ASSETS
 import './Hero.scss';
 import imgHero from '../../../../assets/home/img-hero.svg';
@@ -22,7 +24,9 @@ const Hero = () => {
                         and succeed online through a range of services 
                         including SEO, PPC, social media marketing, and content creation.
                     </p>
-                    <Button to='/pricing' buttonStyle='secondary'>Book a consultation</Button>
+                    <Link to='/aboutus'>
+                        <Button buttonStyle='secondary'>Book a consultation</Button>
+                    </Link>
                 </div>
                 <div className="image-hero">
                     <img src={imgHero} alt="Hero" />
