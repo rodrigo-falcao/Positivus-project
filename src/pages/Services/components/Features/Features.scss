@@ -38,38 +38,6 @@
     }
 }
 
-// CARDS SECTION
-
-.engine-cards {
-    padding-top: 80px;
-    gap: 40px;
-    .engine-card {
-        background-color: main.$text-background-color;
-        border-radius: 45px;
-        color: main.$terciary-color;
-        box-sizing: border-box;
-        padding: 40px;
-        width: 100%;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        
-        img {
-            width: 100px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        .engine-text {
-            padding: 0 40px ;
-            h3 {
-                font-size: 30px;
-            }
-        }
-        &:hover {
-            background-color: main.$secondary-color; 
-            transform: translateY(-10px);
-        }
-    }
-}
-
 @media (max-width: 768px) {
     .engine-container {
         flex-direction: column;
@@ -91,24 +59,4 @@
             }
         }
     }
-    .engine-cards {
-        gap: 20px;
-        .engine-card {
-            padding: 20px;
-            width: 100%;
-            
-            img {
-                width: 100px;
-                height: auto;
-                margin-bottom: 20px;
-            }
-            .engine-text {
-                padding: 0 40px ;
-                h3 {
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-    
 }

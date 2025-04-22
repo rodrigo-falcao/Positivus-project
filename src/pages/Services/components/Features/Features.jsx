@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 // ASSETS
 import './Features.scss';
@@ -10,10 +10,10 @@ import Vector03 from '../../../../assets/services/vector03.svg'
 import Vector04 from '../../../../assets/services/vector04.svg'
 import Vector05 from '../../../../assets/services/vector05.svg'
 import Vector06 from '../../../../assets/services/vector06.svg'
-import ArrowGren from '../../../../assets/home/arrow-green.svg'
 
 // COMPONENTS
 import Button from '../../../../components/Button/Button';
+import CaseStories from '../../../../components/CaseStories/CaseStories';
 
 const Features = () => {
     const engineData = [
@@ -48,6 +48,23 @@ const Features = () => {
             text: "We continuously monitor performance, track rankings, and provide detailed reports, making data-driven adjustments to maintain and improve your results.",
         }
     ]
+    const caseStoriesData = [
+        {
+            title: 'E-commerce Fashion Brand',
+            content: 'We implemented a tailored SEO strategy that boosted organic search rankings, leading to a significant increase in traffic and sales.',
+            textModal: 'We implemented a tailored SEO strategy that boosted organic search rankings, leading to a significant increase in traffic and sales. Our approach included keyword research, on-page optimization, and content creation, ensuring the brand stood out in a competitive market. Additionally, we focused on improving the website\'s technical performance, enhancing user experience, and building high-quality backlinks to further strengthen the brands online presence. These efforts resulted in sustained growth, increased customer engagement, and a stronger competitive edge in the market.',
+        },
+        {
+            title: 'Local Restaurant Chain',
+            content: 'By optimizing local SEO, we increased visibility, driving a boost in online reservations and foot traffic.',
+            textModal: 'By optimizing local SEO, we increased visibility, driving a boost in online reservations and foot traffic. Our targeted approach helped the restaurant chain attract more customers and improve its online presence. Additionally, we focused on enhancing their Google My Business profiles, ensuring accurate and engaging information for potential customers. We also implemented a review management strategy to build trust and credibility, further increasing customer engagement. These efforts resulted in sustained growth, improved brand recognition, and a stronger connection with the local community.',
+        },
+        {
+            title: 'Healthcare Provider',
+            content: 'Through content optimization, we helped a healthcare provider rank higher, resulting in more inquiries and bookings.',
+            textModal: 'Through content optimization, we helped a healthcare provider rank higher, resulting in more inquiries and bookings. Our efforts improved their online visibility and enhanced patient engagement. Additionally, we focused on creating high-quality, informative content tailored to the needs of their target audience, ensuring that patients could easily find the services they were looking for. We also implemented a targeted keyword strategy to improve search engine rankings for critical healthcare services, driving more organic traffic to their website. These efforts resulted in a significant increase in patient inquiries, improved trust in the provider\'s expertise, and a stronger online presence in the healthcare industry.',
+        },
+    ];
     return (
         <>
         <div className='container'>
@@ -87,45 +104,7 @@ const Features = () => {
                     Success through Our Case Studies
                 </p>
             </div>
-            <div className='container case-stories d-flex  jc-space-between'>
-                <div className='case-story'>
-                    <h3>E-commerce Fashion Brand</h3>
-                    <p>
-                        We implemented a tailored SEO strategy that boosted organic 
-                        search rankings, leading to a 150% increase in website traffic 
-                        and a 50% rise in online sales within six months.
-                    </p>
-                    <Link to='/' className='d-flex btn-case'>
-                        <p>Learn More</p>
-                        <Button><img src={ArrowGren} alt="" /></Button>
-                    </Link>
-                </div>
-                <div className='case-story'>
-                    <h3>Local Restaurant Chain</h3>
-                    <p>
-                        By optimizing local SEO and enhancing Google My Business profiles, 
-                        we increased visibility, driving a 300% boost in online reservations 
-                        and foot traffic. This is a great example of SEO can drive business.
-                    </p>
-                    <Link to='/' className='d-flex btn-case'>
-                        <p>Learn More</p>
-                        <Button><img src={ArrowGren} alt="" /></Button>
-                    </Link>
-                </div>
-                <div className='case-story'>
-                    <h3>Healthcare Provider</h3>
-                    <p>
-                        Through content optimization and targeted keyword strategy, 
-                        we helped a healthcare provider rank on the first page for 
-                        critical services, resulting in a 180% increase in inquiries 
-                        and patient bookings.
-                    </p>
-                    <Link to='/' className='d-flex btn-case'>
-                        <p>Learn More</p>
-                        <Button><img src={ArrowGren} alt="" /></Button>
-                    </Link>
-                </div>
-            </div>
+            <CaseStories data={caseStoriesData} />
         </div>
         </>
     );

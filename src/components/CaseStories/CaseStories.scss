@@ -1,0 +1,110 @@
+@use '../../main.scss' as main;
+
+.engine-cards {
+    padding-top: 80px;
+    gap: 40px;
+    .engine-card {
+        background-color: main.$text-background-color;
+        border-radius: 45px;
+        color: main.$terciary-color;
+        box-sizing: border-box;
+        padding: 40px;
+        width: 100%;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        
+        img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .engine-text {
+            padding: 0 40px ;
+            h3 {
+                font-size: 30px;
+            }
+        }
+        &:hover {
+            background-color: main.$secondary-color; 
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.btn-case {
+    cursor: pointer;
+}
+
+// MODAL SECTION
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: main.$terciary-color;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 650px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+    color: main.$primary-color;
+    box-sizing: border-box;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: main.$primary-color;;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        color: main.$secondary-color;
+        transition: all 0.3s ease;
+    }
+}
+
+@media (max-width: 768px) {
+    .engine-cards {
+        gap: 20px;
+        .engine-card {
+            padding: 20px;
+            width: 100%;
+            
+            img {
+                width: 100px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            .engine-text {
+                padding: 0 40px ;
+                h3 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .modal-content {
+        background: main.$terciary-color;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 90%;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        position: relative;
+        color: main.$primary-color;
+    }
+}
