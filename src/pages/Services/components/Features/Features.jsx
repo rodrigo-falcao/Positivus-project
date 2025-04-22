@@ -13,7 +13,8 @@ import Vector06 from '../../../../assets/services/vector06.svg'
 
 // COMPONENTS
 import Button from '../../../../components/Button/Button';
-import CaseStories from '../../../../components/CaseStories/CaseStories';
+import StorieCard from '../../../../components/StorieCard/StorieCard';
+
 
 const Features = () => {
     const engineData = [
@@ -51,16 +52,19 @@ const Features = () => {
     const caseStoriesData = [
         {
             title: 'E-commerce Fashion Brand',
+            titleModal: 'E-commerce Fashion Brand',
             content: 'We implemented a tailored SEO strategy that boosted organic search rankings, leading to a significant increase in traffic and sales.',
             textModal: 'We implemented a tailored SEO strategy that boosted organic search rankings, leading to a significant increase in traffic and sales. Our approach included keyword research, on-page optimization, and content creation, ensuring the brand stood out in a competitive market. Additionally, we focused on improving the website\'s technical performance, enhancing user experience, and building high-quality backlinks to further strengthen the brands online presence. These efforts resulted in sustained growth, increased customer engagement, and a stronger competitive edge in the market.',
         },
         {
             title: 'Local Restaurant Chain',
+            titleModal: 'Local Restaurant Chain',
             content: 'By optimizing local SEO, we increased visibility, driving a boost in online reservations and foot traffic.',
             textModal: 'By optimizing local SEO, we increased visibility, driving a boost in online reservations and foot traffic. Our targeted approach helped the restaurant chain attract more customers and improve its online presence. Additionally, we focused on enhancing their Google My Business profiles, ensuring accurate and engaging information for potential customers. We also implemented a review management strategy to build trust and credibility, further increasing customer engagement. These efforts resulted in sustained growth, improved brand recognition, and a stronger connection with the local community.',
         },
         {
             title: 'Healthcare Provider',
+            titleModal: 'Healthcare Provider',
             content: 'Through content optimization, we helped a healthcare provider rank higher, resulting in more inquiries and bookings.',
             textModal: 'Through content optimization, we helped a healthcare provider rank higher, resulting in more inquiries and bookings. Our efforts improved their online visibility and enhanced patient engagement. Additionally, we focused on creating high-quality, informative content tailored to the needs of their target audience, ensuring that patients could easily find the services they were looking for. We also implemented a targeted keyword strategy to improve search engine rankings for critical healthcare services, driving more organic traffic to their website. These efforts resulted in a significant increase in patient inquiries, improved trust in the provider\'s expertise, and a stronger online presence in the healthcare industry.',
         },
@@ -104,7 +108,7 @@ const Features = () => {
                     Success through Our Case Studies
                 </p>
             </div>
-            <CaseStories data={caseStoriesData} />
+            <StorieCard data={caseStoriesData} />
         </div>
         </>
     );
