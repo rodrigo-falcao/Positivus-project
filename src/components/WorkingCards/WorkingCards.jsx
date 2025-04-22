@@ -13,37 +13,39 @@ const WorkingCards = ({ data }) => {
     };
 
     return (
-        <div className='container working-cards'>
-            {data.map((caseStudy, index) => (
-                <div
-                    key={index}
-                    className={`work-story ${expandedCard === index ? 'expanded' : ''}`}
-                    onClick={() => toggleCard(index)}
-                >
-                    <div className='d-flex al-center jc-space-between'>
-                        <div className='d-flex al-center jc-center stroy-card-title'>
-                            <h3>{caseStudy.title}</h3>
-                            <p>{caseStudy.subtitle}</p>
-                        </div>
-                        <Link className='d-flex btn-case'>
-                            <Button>
-                                <img
-                                    src={expandedCard === index ? ButtonMinus : ButtonPlus}
-                                    alt={expandedCard === index ? 'Collapse' : 'Expand'}
-                                />
-                            </Button>
-                        </Link>
-                    </div>
-                    {expandedCard === index && (
-                        <>
-                            <div className="divider"></div>
-                            <div className="card-content">
-                                <p>{caseStudy.description}</p>
+        <div className='container'>
+            <div className='working-cards'>
+                {data.map((caseStudy, index) => (
+                    <div
+                        key={index}
+                        className={`work-story ${expandedCard === index ? 'expanded' : ''}`}
+                        onClick={() => toggleCard(index)}
+                    >
+                        <div className='d-flex al-center jc-space-between'>
+                            <div className='d-flex al-center jc-center stroy-card-title'>
+                                <h3>{caseStudy.title}</h3>
+                                <p>{caseStudy.subtitle}</p>
                             </div>
-                        </>
-                    )}
-                </div>
-            ))}
+                            <Link className='d-flex btn-case'>
+                                <Button>
+                                    <img
+                                        src={expandedCard === index ? ButtonMinus : ButtonPlus}
+                                        alt={expandedCard === index ? 'Collapse' : 'Expand'}
+                                    />
+                                </Button>
+                            </Link>
+                        </div>
+                        {expandedCard === index && (
+                            <>
+                                <div className="divider"></div>
+                                <div className="card-content">
+                                    <p>{caseStudy.description}</p>
+                                </div>
+                            </>
+                        )}
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

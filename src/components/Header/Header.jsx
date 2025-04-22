@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
 
 // COMPONENTS
 import Button from '../Button/Button';
@@ -8,13 +9,66 @@ import './Header.scss';
 import ImgLogo from '/logo-header.svg';
 
 function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navRef = useRef(null);
+    // Toggles the menu open and close state
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+    // Closes the menu when a link is clicked
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+    // Scrolls the window to the top smoothly
+    const handleScrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+    // Close the menu when the user clicks outside of it
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                setIsMenuOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+    // Disable body scroll when the menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [isMenuOpen]);
     return (
         <header>
             <div className="container header-container">
-                <Link to='/' className="header-logo">
-                    <img src={ImgLogo} alt="Logo" />
+
+                <Link 
+                    to='/' 
+                    className="header-logo" 
+                    onClick={() => {
+                        closeMenu();
+                        handleScrollToTop();
+                    }}>
+                    <img src={ImgLogo} alt="Logo"/>
                 </Link>
-                <nav>
+
+                <div className='mobile-menu' onClick={toggleMenu}>
+                    <Button>
+                        Menu
+                    </Button>
+                </div>
+                <nav ref={navRef} className={`header-nav ${isMenuOpen ? 'open' : ''}`}>
+                    <div className='header-close' onClick={closeMenu}>
+                        <Button >
+                            X
+                        </Button>
+                    </div>
                     <ul className="header-list d-flex al-center">
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/aboutus'>About Us</Link></li>

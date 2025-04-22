@@ -41,7 +41,7 @@
 @media (max-width: 768px) {
     .hero-section {
         text-align: center; 
-        padding: 50px;
+        padding: 20px;
         align-items: center;
         background-color: main.$primary-color;
         flex-direction: column-reverse; 
@@ -66,6 +66,11 @@
                 margin: 20px auto; 
             }
         }
+        .hero-blog {
+            h1 {
+                font-size: 36px;
+            }
+        }
     }
 }
 
@@ -74,7 +79,7 @@
         flex-direction: column-reverse; 
         text-align: center; 
         padding: 10px;
-        padding-top: 80px;
+        padding-top: 0px;
         align-items: center;
         background-color: main.$primary-color;
         .hero-content {
@@ -96,6 +101,11 @@
             img {
                 max-width: 60%; 
                 margin: 20px auto; 
+            }
+        }
+        .hero-blog {
+            h1 {
+                font-size: 32px;
             }
         }
     }
