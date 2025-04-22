@@ -39,7 +39,7 @@ const CaseStories = ({ data }) => {
                 {data.map((story, index) => (
                         <div key={index} className="case-story">
                         <h3>{story.title}</h3>
-                        <p>{story.content.substring(0, 100)}...</p>
+                        <p>{story.content}</p>
                         <div
                             className="d-flex btn-case"
                             onClick={() => openModal(story.title, story.textModal)}

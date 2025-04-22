@@ -51,20 +51,30 @@
 
 .modal-content {
     background: main.$terciary-color;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 650px;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    max-width: 750px;
     width: 90%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
     position: relative;
     color: main.$primary-color;
-    box-sizing: border-box;
+    h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: main.$secondary-color;
+    }
+    p {
+        font-size: 20px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
 }
 
 .modal-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 30px;
+    right: 30px;
     background: none;
     color: main.$primary-color;;
     border: none;
@@ -106,5 +116,19 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
         position: relative;
         color: main.$primary-color;
+        h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: main.$secondary-color;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+    }
+    .modal-close {
+        top: 15px;
+        right: 15px;
     }
 }
