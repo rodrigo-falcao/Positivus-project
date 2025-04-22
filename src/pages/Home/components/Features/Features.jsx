@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 // ASSETS
 import './Features.scss';
 import ImgFeatures from '../../../../assets/home/img-features.svg'
