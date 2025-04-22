@@ -30,8 +30,55 @@
     }
 }
 
-.btn-case {
-    cursor: pointer;
+.case-stories {
+    background-color: main.$terciary-color;
+    color: main.$primary-color;
+    gap: 2rem;
+    padding: 50px;
+    border-radius: 35px;
+    margin: 100px auto;
+    box-sizing: border-box;
+    .case-story {
+        flex: 1;
+        margin: 0 1rem;
+        padding: 20px;
+        text-align: left;
+        border-right: 1px solid rgba(255, 255, 255, 0.205); 
+
+        h3 {
+            height: 40px;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+        .btn-case {
+            cursor: pointer;
+            p {
+                color: main.$secondary-color;
+            }
+            button {
+                border: none;
+                background-color: transparent;
+                img {
+                    transition: transform 0.3s ease;
+                }
+                &:hover {
+                    img {
+                        transform: rotate(30deg); 
+                    }
+                }
+            }
+            img {
+                transition: transform 0.3s ease;
+            }
+            &:hover {
+                img {
+                    transform: rotate(30deg); 
+                }
+            }
+        }
+    }
 }
 
 // MODAL SECTION
@@ -107,6 +154,17 @@
             }
         }
     }
+    .case-stories {
+        flex-direction: column;
+        margin: 50px auto;
+        .case-story {
+            border-right: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.205); ;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
     .modal-content {
         background: main.$terciary-color;
         padding: 20px;
@@ -130,5 +188,20 @@
     .modal-close {
         top: 15px;
         right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .case-stories {
+        padding: 20px;
+        margin: 30px auto;
+        .case-story {
+            padding: 10px;
+            border-right: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.205); ;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
     }
 }

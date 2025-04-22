@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 
-// COMPONENTS
-import Button from '../Button/Button';
-
 // ASSETS
 import './Header.scss';
 import ImgLogo from '/logo-header.svg';
+
+// COMPONENTS
+import Button from '../Button/Button';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

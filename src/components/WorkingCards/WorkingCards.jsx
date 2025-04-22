@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+// ASSETS
+import './WorkingCards.scss';
+
+// COMPONENTS
 import Button from '../Button/Button';
 import ButtonMinus from '../../assets/button-.svg'
 import ButtonPlus from '../../assets/button+.svg'
-import './WorkingCards.scss';
 
 const WorkingCards = ({ data }) => {
     const [expandedCard, setExpandedCard] = useState(null);

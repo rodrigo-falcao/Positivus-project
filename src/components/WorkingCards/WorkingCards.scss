@@ -36,6 +36,7 @@
             align-items: center;
             justify-content: flex-start;
             margin-top: 1rem; 
+            cursor: pointer;
 
             p {
                 margin-right: 10px;
@@ -64,34 +65,7 @@
     }
 }
 
-@media (max-width: 768px) {
-    .case-stories {
-        flex-direction: column;
-        margin: 50px auto;
-        .case-story {
-            border-right: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.205); ;
-            &:last-child {
-                border-bottom: none;
-            }
-        }
-    }
-}
-
 @media (max-width: 480px) {
-    .case-stories {
-        padding: 20px;
-        margin: 30px auto;
-        .case-story {
-            padding: 10px;
-            border-right: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.205); ;
-            &:last-child {
-                border-bottom: none;
-            }
-        }
-    }
-
     .working-cards {
         padding-bottom: 50px;
         .work-story {

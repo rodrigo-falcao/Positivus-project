@@ -1,5 +1,3 @@
-import React from 'react';
-
 // ASSETS
 import './HeroSection.scss';
 

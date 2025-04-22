@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 // ASSETS
 import './OtherServices.scss';
@@ -12,16 +11,58 @@ import ImgCard6 from '../../../../assets/home/img-card6.svg';
 import ArrowGreen from '../../../../assets/arrow-green.svg';
 
 // COMPONENTS
-import Button from '../../../../components/Button/Button';
+import BannerSection from '../../../../components/BannerSection/BannerSection';
 
 const OtherServices = () => {
     const servicesData = [
-        { title: 'Search Engine Optimization', imgSrc: ImgCard2 },
-        { title: 'Pay-Per-Click Advertising', imgSrc: ImgCard3 },
-        { title: 'Social Media Marketing', imgSrc: ImgCard4 },
-        { title: 'Email Marketing', imgSrc: ImgCard5 },
-        { title: 'Content Creation', imgSrc: ImgCard6 },
-        { title: 'Analytics and Tracking', imgSrc: ImgCard1 },
+        {
+            title: 'Search engine optimization',
+            contentModal: 'Search engine optimization (SEO) is the process of optimizing a website to improve its visibility and ranking on search engines like Google. This involves various techniques such as keyword research, on-page optimization, link building, and content creation. The goal of SEO is to increase organic traffic to a website and improve its online presence. Search engine optimization (SEO) is the process of optimizing a website to improve its visibility and ranking on search engines like Google. This involves various techniques such as keyword research, on-page optimization, link building, and content creation. The goal of SEO is to increase organic traffic to a website and improve its online presence.',
+            img: ImgCard2,
+            arrow: ArrowGreen,
+            color: 'primary',
+            modalColor: 'modal-primary',
+        },
+        {
+            title: 'Pay-Per-Click Advertising',
+            contentModal: 'Pay-per-click advertising (PPC) is an online advertising model where advertisers pay each time a user clicks on one of their ads. It is a way to buy visits to your site, rather than attempting to “earn” those visits organically. Pay-per-click advertising (PPC) is an online advertising model where advertisers pay each time a user clicks on one of their ads. It is a way to buy visits to your site, rather than attempting to “earn” those visits organically.',
+            img: ImgCard3,
+            arrow: ArrowGreen,
+            color: 'primary',
+            modalColor: 'modal-primary',
+        },
+        {
+            title: 'Social Media Marketing',
+            contentModal: 'Social media marketing is the use of social media platforms and websites to promote a product or service. It involves creating and sharing content on social media networks to achieve marketing and branding goals. Social media marketing is the use of social media platforms and websites to promote a product or service. It involves creating and sharing content on social media networks to achieve marketing and branding goals.',
+            img: ImgCard4,
+            arrow: ArrowGreen,
+            color: 'primary',
+            modalColor: 'modal-primary',
+        },
+        {
+            title: 'Email Marketing',
+            contentModal: 'Email marketing is a digital marketing strategy that involves sending emails to a list of subscribers or potential customers. It is used to promote products, services, or events, and to build relationships with customers. Email marketing is a digital marketing strategy that involves sending emails to a list of subscribers or potential customers. It is used to promote products, services, or events, and to build relationships with customers.',
+            img: ImgCard5,
+            arrow: ArrowGreen,
+            color: 'primary',
+            modalColor: 'modal-primary',
+        },
+        {
+            title: 'Content Creation',
+            contentModal: 'Content creation is the process of generating topic ideas that appeal to your buyer persona, creating written or visual content around those ideas, and making that information accessible to your audience as a blog, video, infographic, or other format. Content creation is the process of generating topic ideas that appeal to your buyer persona, creating written or visual content around those ideas, and making that information accessible to your audience as a blog, video, infographic, or other format.',
+            img: ImgCard6,
+            arrow: ArrowGreen,
+            color: 'primary',
+            modalColor: 'modal-primary',
+        },
+        {
+            title: 'Analytics and Tracking',
+            contentModal: 'Analytics and tracking are essential components of digital marketing. They involve collecting and analyzing data related to website traffic, user behavior, and marketing campaign performance. Analytics and tracking are essential components of digital marketing. They involve collecting and analyzing data related to website traffic, user behavior, and marketing campaign performance.',
+            img: ImgCard1,
+            arrow: ArrowGreen,
+            color: 'primary',
+            modalColor: 'modal-primary',
+        },
     ]
     return (
         <>
@@ -34,22 +75,8 @@ const OtherServices = () => {
                 </p>
             </div>
         </div>
-        <div className='container banner-cards d-grid al-center'>
-            {servicesData.map((service, index) => (
-                <div className="card-banner d-flex al-center jc-space-between primary" key={index}>
-                    <div className='card-text d-flex flex-column jc-space-between'>
-                        <h3>{service.title}</h3>
-                        <div className='banner-btn d-flex al-center'>
-                            <Link className='d-flex' to='/'>
-                                <Button><img src={ArrowGreen} alt="Arrow Green" /></Button>
-                                <p>Learn more</p>
-                            </Link>
-                        </div>
-                    </div>
-                    <img src={service.imgSrc} alt="Image Card" className='banner-img'/>
-                </div>
-            ))}
-        </div>
+
+        <BannerSection data={servicesData} />
         </>
     );
 };

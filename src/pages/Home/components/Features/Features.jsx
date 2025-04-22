@@ -1,12 +1,11 @@
+import { Link } from 'react-router-dom';
 // ASSETS
 import './Features.scss';
 import ImgFeatures from '../../../../assets/home/img-features.svg'
-import ArrowGren from '../../../../assets/home/arrow-green.svg'
 
 
 // COMPONENTS
 import Button from '../../../../components/Button/Button';
-import { Link } from 'react-router-dom';
 import WorkingCards from '../../../../components/WorkingCards/WorkingCards';
 import StorieCard from '../../../../components/StorieCard/StorieCard'
 
@@ -43,7 +42,6 @@ const Features = () => {
             description: 'We refine strategies over time to adapt to market changes, ensuring long-term growth and success.',
         },
     ];
-
     const StoryData = [
         {
             titleModal: 'E-commerce Fashion Brand',
@@ -78,6 +76,7 @@ const Features = () => {
                 </div>
                 <img src={ImgFeatures} alt="Features" />
             </div>
+            
             <div className='container title-content d-flex al-center '>
                 <h3>Case Studies</h3>
                 <div>
@@ -87,6 +86,7 @@ const Features = () => {
                     </p>
                 </div>
             </div>
+
             <WorkingCards data={workingCardsData} />
 
             <div className="container title-content d-flex al-center">

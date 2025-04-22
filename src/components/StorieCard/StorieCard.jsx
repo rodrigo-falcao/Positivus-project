@@ -35,7 +35,7 @@ const StorieCard = ({ data }) => {
     
     return (
         <>
-        <div className='container case-stories d-flex  jc-space-between'>
+        <div className='container case-stories d-flex jc-space-between'>
             {data.map((story, index) => (
                     <div key={index} className="case-story">
                     {story.title && <h3>{story.title}</h3>}

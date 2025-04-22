@@ -1,0 +1,249 @@
+@use '../../main.scss' as main;
+
+.banner-cards {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
+    padding: 40px 0;
+    justify-items: center;
+    justify-items: stretch;
+    margin-bottom: 50px;
+
+    .card-banner {
+        border-radius: 45px;
+        width: 100%;
+        height: 300px;
+        padding: 40px;
+        box-sizing: border-box;
+        box-shadow: 0 4px 1px rgba(0, 0, 0);
+        border: 1px solid main.$terciary-color;
+        .card-text {
+            width: 50%;
+            height: 100%;
+            h3 {
+                max-width: 60%;
+                display: inline-block;
+                padding: 5px 10px; 
+                border-radius: 10px; 
+                font-size: 24px; 
+            }
+            .banner-btn {
+                cursor: pointer;
+                button {
+                    padding: 0 15px;
+                    border: none;
+                    background-color: transparent;
+                }
+                img {
+                    transition: transform 0.3s ease;
+                }
+                &:hover {
+                    img {
+                        transform: rotate(30deg); 
+                    }
+                }
+            }
+        }
+        .banner-img {
+            max-width: 210px;
+            max-height: auto;
+        }
+    }
+    .primary {
+        background-color: main.$text-background-color;
+        h3 {
+            color: main.$terciary-color;
+            background-color: main.$secondary-color;
+            padding: 0 5px;
+        }
+    }
+    .secondary {
+        background-color: main.$secondary-color;
+        h3 {
+            color: main.$terciary-color;
+            background-color: main.$primary-color;
+            padding: 0 5px;
+        }
+    }
+    .tertiary {
+        background-color: main.$terciary-color;
+        h3 {
+            color: main.$terciary-color;
+            background-color: main.$secondary-color;
+            padding: 0 5px;
+        }
+        p {
+            color: main.$primary-color;
+        }
+    }
+}
+
+// MODAL CONTENT
+
+.modal-overlay-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-banner {
+    border-radius: 10px;
+    padding: 40px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 1001;
+    box-shadow: 0 4px 1px rgba(0, 0, 0);
+    border: 1px solid main.$terciary-color;
+    h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+}
+.modal-close-banner {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.modal-primary {
+    border: 1px solid main.$terciary-color;
+    background-color: main.$background-color;
+    h3 {
+        color: main.$terciary-color;
+        background-color: main.$secondary-color;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    .modal-close-banner {
+        color: main.$terciary-color;
+        transition: all 0.3s ease;
+        &:hover {
+            color: main.$secondary-color;
+            transition: all 0.3s ease;
+        }
+    }
+}
+.modal-secondary {
+    border: 1px solid main.$terciary-color;
+    background-color: main.$secondary-color;
+    h3 {
+        color: main.$terciary-color;
+        padding: 5px 10px;
+        background-color: main.$primary-color;
+        border-radius: 5px;
+    }
+    .modal-close-banner {
+        color: main.$terciary-color;
+        transition: all 0.3s ease;
+        &:hover {
+            color: main.$primary-color;
+            transition: all 0.3s ease;
+        }
+    }
+}
+.modal-tertiary {
+    border: 1px solid main.$terciary-color;
+    background-color: main.$terciary-color;
+    h3 {
+        color: main.$terciary-color;
+        background-color: main.$secondary-color;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    p {
+        color: main.$primary-color;
+    }
+    .modal-close-banner {
+        color: main.$primary-color;
+        transition: all 0.3s ease;
+        &:hover {
+            color: main.$secondary-color;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .banner-cards {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-cards {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    .modal-banner {
+        h3 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-cards {
+        grid-template-columns: repeat(1, 1fr); 
+        
+        .card-banner {
+            height: auto;
+            padding: 20px;
+            margin: auto;
+            border-radius: 25px;
+            .card-text {
+                width: 60%;
+                height: auto;
+                h3 {
+                    max-width: 80%;
+                    display: inline-block;
+                    padding: 5px 10px; 
+                    font-size: 18px; 
+                }
+                .banner-btn {
+                    padding-top: 40px;
+                    button {
+                        padding: 0 10px;
+                        border: none;
+                        background-color: transparent;
+                    }
+                    img {
+                        align-items: center;
+                        transition: transform 0.3s ease;
+                        width: 35px;
+                        transform: rotate(30deg); 
+                    }
+                }
+            }
+        }
+        .banner-img {
+            width: 120px;
+            height: auto;
+        }
+    }
+    .modal-banner {
+        padding: 40px 20px;
+        h3 {
+            font-size: 18px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+}

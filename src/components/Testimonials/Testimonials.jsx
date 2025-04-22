@@ -5,9 +5,6 @@ import './Testimonials.scss';
 import Arrowgren from '../../assets/arrow-green.svg';
 import ComandCarousel from '../../assets/home/comand-carousel.svg';
 
-// COMPONENTS
-
-
 const Testimonials = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const testimonials = [
