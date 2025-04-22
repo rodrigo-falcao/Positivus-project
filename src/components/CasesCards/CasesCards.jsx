@@ -16,7 +16,7 @@ const CasesCards = ({ data }) => {
                     <div className='case-card' key={index}>
                         <h3>{caseItem.title}</h3>
                         <p>{caseItem.description}</p>
-                        <Link className='d-flex btn-case-card al-center'>
+                        <Link to={caseItem.link} className='d-flex btn-case-card al-center'>
                             <Button><img src={ArrowGren} alt=""/></Button>
                             <p>Learn More</p>
                         </Link>

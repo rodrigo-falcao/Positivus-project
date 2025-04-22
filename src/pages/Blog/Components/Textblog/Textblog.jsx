@@ -14,26 +14,32 @@ const Textblog = () => {
         {
             title: '10 SEO Myths You Need to Stop Believing',
             description: 'Think keyword stuffing and meta tags are the secret to ranking? Discover the truth behind common SEO misconceptions and learn what really drives results.',
+            link: '/aboutus',
         },
         {
             title: 'Maximizing ROI with Social Media Advertising',
             description: 'Social media ads are more than just boosted posts. Explore proven strategies for crafting campaigns that engage audiences and deliver measurable returns.',
+            link: '/aboutus',
         },
         {
             title: 'How Content Marketing Fuels Long-Term Growth',
             description: 'Content isn’t just king—it’s the foundation of sustainable business growth. Find out how blogs, videos, and more can build trust and drive conversions.',
+            link: '/aboutus',
         },
         {
             title: 'The Art of A/B Testing: Perfecting Your Campaigns',
             description: 'From headlines to call-to-actions, small tweaks can make a big difference. Learn how to use A/B testing to refine your marketing strategies.',
+            link: '/aboutus',
         },
         {
             title: 'Understanding Google’s Latest Algorithm Update',
             description: 'Search rankings change constantly—stay ahead by learning about the latest Google update and its impact on your SEO strategy.',
+            link: '/aboutus',
         },
         {
             title: '5 Ways AI is Changing Digital Marketing',
             description: 'Artificial intelligence is transforming the way we target, analyze, and engage audiences. Discover how to leverage AI to stay competitive.',
+            link: '/aboutus',
         },
     ]
     return (
@@ -138,17 +144,17 @@ const Textblog = () => {
                     <div className='facts-card-left d-flex flex-column jc-center'>
                         <div className='d-flex al-center text-blog-card'>
                             <p>Content marketing costs</p>
-                            <h4>62% less than paid ads</h4>
+                            <h4><span className='color-span-black'>62%</span> less than paid ads</h4>
                         </div>
                         <div className='d-flex al-center text-blog-card'>
                             <p>but generates</p>
-                            <h4>3x as many leads</h4>
+                            <h4><span className='color-span-black'>3x</span> as many leads</h4>
                         </div>
                     </div>
                     <div className='facts-card-right'>
                         <div className='d-flex flex-column'>
                             <p>Organic search drives</p>
-                            <h4><span style={{ color: '#B9FF66' }}>53%</span> of all website traffic,</h4>
+                            <h4><span className='color-span-green'>53%</span> of all website traffic,</h4>
                             <p>making it the largest single source of traffic.</p>
                         </div>
                     </div>

@@ -77,6 +77,14 @@
                 border: 1px solid main.$terciary-color;
                 padding: 20px 30px;
                 box-sizing: border-box;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    background-color: main.$secondary-color;
+                    border: 1px solid transparent;
+                    color: main.$terciary-color;
+                    transition: all 0.3s ease-in-out;
+                    box-shadow: none;
+                }
             }
             .facts-card-right {
                 width: 65%;
@@ -84,6 +92,16 @@
                 border-radius: 25px;
                 padding: 20px 30px;
                 box-sizing: border-box;
+                transition: all 0.3s ease-in-out;
+                border: 1px solid transparent;
+                &:hover {
+                    background-color: main.$text-background-color;
+                    border: 1px solid transparent;
+                    color: main.$terciary-color;
+                    transition: all 0.3s ease-in-out;
+                    box-shadow: 0 4px 1px rgba(0, 0, 0);
+                    border: 1px solid main.$terciary-color;
+                }
             }
         }
         .facts-lower {
@@ -94,6 +112,8 @@
                 border-radius: 25px;
                 padding: 30px 60px;
                 box-sizing: border-box;
+                border: 1px solid transparent;
+                transition: all 0.3s ease-in-out;
                 p {
                     font-size: 20px;
                     line-height: 22px;
@@ -106,6 +126,21 @@
                 .text-blog-card {
                     gap: 20px;
                 }
+                .color-span-black {
+                    color: main.$terciary-color;
+                    transition: all 0.3s ease-in-out;
+                }
+                &:hover {
+                    background-color: main.$terciary-color;
+                    border: 1px solid transparent;
+                    color: main.$primary-color;
+                    transition: all 0.3s ease-in-out;
+                    box-shadow: none;
+                    .color-span-black {
+                        color: #B9FF66;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
             }
             .facts-card-right {
                 width: 35%;
@@ -114,9 +149,23 @@
                 box-sizing: border-box;
                 background-color: main.$terciary-color;
                 color: main.$primary-color;
+                transition: all 0.3s ease-in-out;
                 h4{
                     font-size: 30px;
                     font-weight: 600;
+                }
+                .color-span-green {
+                    color: #B9FF66;
+                    transition: all 0.3s ease-in-out;
+                }
+                &:hover {
+                    background-color: main.$text-background-color;
+                    color: main.$terciary-color;
+                    transition: all 0.3s ease-in-out;
+                    .color-span-green {
+                        color: main.$terciary-color;
+                        transition: all 0.3s ease-in-out;
+                    }
                 }
             }
         }
