@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // ASSETS
-import './Featured.scss';
+import './featured.scss';
 import ArrowGren from '../../../../assets/arrow-background-green.svg';
 import Button from '../../../../components/Button/Button';
 
