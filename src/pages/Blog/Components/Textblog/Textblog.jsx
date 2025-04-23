@@ -14,32 +14,32 @@ const Textblog = () => {
         {
             title: '10 SEO Myths You Need to Stop Believing',
             description: 'Think keyword stuffing and meta tags are the secret to ranking? Discover the truth behind common SEO misconceptions and learn what really drives results.',
-            link: '/aboutus',
+            modalDescription: 'Think keyword stuffing and meta tags are the secret to ranking? Discover the truth behind common SEO misconceptions and learn what really drives results. Many businesses fall prey to outdated beliefs about SEO, leading to ineffective strategies that waste time and resources. By debunking these myths, you can focus on what truly matters: creating high-quality content, optimizing for user experience, and building authoritative backlinks. This shift in perspective will not only improve your search rankings but also enhance your overall digital marketing strategy.',
         },
         {
             title: 'Maximizing ROI with Social Media Advertising',
             description: 'Social media ads are more than just boosted posts. Explore proven strategies for crafting campaigns that engage audiences and deliver measurable returns.',
-            link: '/aboutus',
+            modalDescription: 'Social media ads are more than just boosted posts. Explore proven strategies for crafting campaigns that engage audiences and deliver measurable returns. By leveraging advanced targeting options, compelling visuals, and clear calls to action, you can create ads that resonate with your audience and drive conversions. Additionally, understanding analytics and performance metrics allows you to refine your approach, ensuring that your social media advertising efforts yield the best possible results.',
         },
         {
             title: 'How Content Marketing Fuels Long-Term Growth',
             description: 'Content isn’t just king—it’s the foundation of sustainable business growth. Find out how blogs, videos, and more can build trust and drive conversions.',
-            link: '/aboutus',
+            modalDescription: 'Content isn’t just king—it’s the foundation of sustainable business growth. Find out how blogs, videos, and more can build trust and drive conversions. By creating valuable, relevant content that resonates with your target audience, you can establish authority in your industry, foster customer loyalty, and ultimately drive more traffic to your website. This long-term strategy not only enhances brand visibility but also positions your business as a trusted resource, leading to increased engagement and higher conversion rates over time.',
         },
         {
             title: 'The Art of A/B Testing: Perfecting Your Campaigns',
             description: 'From headlines to call-to-actions, small tweaks can make a big difference. Learn how to use A/B testing to refine your marketing strategies.',
-            link: '/aboutus',
+            modalDescription: 'From headlines to call-to-actions, small tweaks can make a big difference. Learn how to use A/B testing to refine your marketing strategies. By systematically testing different elements of your campaigns, you can identify what resonates best with your audience and optimize for higher engagement and conversions. This data-driven approach allows you to make informed decisions, reduce guesswork, and ultimately improve the effectiveness of your marketing efforts.',
         },
         {
             title: 'Understanding Google’s Latest Algorithm Update',
             description: 'Search rankings change constantly—stay ahead by learning about the latest Google update and its impact on your SEO strategy.',
-            link: '/aboutus',
+            modalDescription: 'Search rankings change constantly—stay ahead by learning about the latest Google update and its impact on your SEO strategy. This update focuses on user experience, content quality, and mobile optimization, making it crucial for businesses to adapt their strategies accordingly. By understanding the key changes and implementing best practices, you can maintain or improve your search visibility and ensure your website meets the evolving expectations of both users and search engines.',
         },
         {
             title: '5 Ways AI is Changing Digital Marketing',
             description: 'Artificial intelligence is transforming the way we target, analyze, and engage audiences. Discover how to leverage AI to stay competitive.',
-            link: '/aboutus',
+            modalDescription: 'Artificial intelligence is transforming the way we target, analyze, and engage audiences. Discover how to leverage AI to stay competitive. From predictive analytics to personalized content recommendations, AI is revolutionizing digital marketing strategies. By harnessing the power of AI, businesses can optimize their campaigns, enhance customer experiences, and drive better results. Explore the latest trends and tools in AI-driven marketing to stay ahead in the ever-evolving digital landscape.',
         },
     ]
     return (

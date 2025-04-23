@@ -73,12 +73,12 @@ function Header() {
                         </Button>
                     </div>
                     <ul className="header-list d-flex al-center">
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/aboutus'>About Us</Link></li>
-                        <li><Link to='/services'>Services</Link></li>
-                        <li><Link to='/usecases'>Use Cases</Link></li>
-                        <li><Link to='/pricing'>Pricing</Link></li>
-                        <li><Link to='/blog'>Blog</Link></li>
+                        <li><Link to='/' onClick={() => { closeMenu(); handleScrollToTop(); }}>Home</Link></li>
+                        <li><Link to='/aboutus' onClick={() => { closeMenu(); handleScrollToTop(); }}>About Us</Link></li>
+                        <li><Link to='/services' onClick={() => { closeMenu(); handleScrollToTop(); }}>Services</Link></li>
+                        <li><Link to='/usecases' onClick={() => { closeMenu(); handleScrollToTop(); }}>Use Cases</Link></li>
+                        <li><Link to='/pricing' onClick={() => { closeMenu(); handleScrollToTop(); }}>Pricing</Link></li>
+                        <li><Link to='/blog' onClick={() => { closeMenu(); handleScrollToTop(); }}>Blog</Link></li>
                         <Button to='/pricing' buttonStyle='primary' >
                             Request a quote
                         </Button>

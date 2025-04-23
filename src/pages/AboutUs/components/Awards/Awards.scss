@@ -105,6 +105,85 @@
     }
 }
 
+// MODAL AREA
+
+.modal-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content-form {
+    background: main.$text-background-color;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    box-sizing: border-box;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+    textarea {
+        width: 100%; 
+        padding: 10px; 
+        border: 1px solid #ccc; 
+        border-radius: 4px;
+        resize: none; 
+        font-size: 14px; 
+        line-height: 1.5; 
+        box-sizing: border-box; 
+        outline: none; 
+        &:focus {
+            border-color: main.$terciary-color;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+        }
+    }
+    textarea::placeholder,
+    input::placeholder {
+        font-size: 14px;
+        color: main.$terciary-color;
+        font-weight: 300; 
+        font-family: main.$font-family; 
+    }
+}
+
+.close-modal-form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    color: main.$terciary-color;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+        color: main.$secondary-color;
+    }
+}
+
 @media (max-width: 769px) {
     .president-title {
         img {

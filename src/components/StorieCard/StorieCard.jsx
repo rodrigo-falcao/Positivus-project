@@ -9,7 +9,7 @@ import Button from '../Button/Button';
 
 const StorieCard = ({ data }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [modalContent, setModalContent] = useState({ titleModal: '', textModal: '' });
+    const [modalContent, setModalContent] = useState({});
     const openModal = (titleModal, textModal) => {
         setModalContent({ titleModal, textModal });
         setIsModalOpen(true);

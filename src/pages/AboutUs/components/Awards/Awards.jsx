@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 
 // ASSETS
 import './Awards.scss';
@@ -13,6 +13,35 @@ import JoinTeam from '../../../../assets/about/join-team.svg'
 import Button from '../../../../components/Button/Button';
 
 const Awards = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
+    };
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Handle form submission logic here
+        console.log('Form submitted!');
+        handleCloseModal();
+    }
+    useEffect(() => {
+        if (isModalOpen) {
+            const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+            document.body.style.overflow = 'hidden';
+            document.body.style.paddingRight = `${scrollBarWidth}px`;
+        } else {
+            document.body.style.overflow = 'auto';
+            document.body.style.paddingRight = '0px';
+        }
+        return () => {
+            document.body.style.overflow = 'auto';
+            document.body.style.paddingRight = '0px';
+        };
+    }, [isModalOpen]);
+    // DATA
     const AwardsData = [
         { 
             img: CardAward1,
@@ -79,10 +108,30 @@ const Awards = () => {
                         We're always looking for passionate individuals to join 
                         our team and help businesses grow. Ready to make an impact?
                     </p>
-                    <Button buttonStyle='secondary' to='/'>Explore Careers</Button>
+                    <Button buttonStyle='secondary' onClick={handleOpenModal}>Explore Careers</Button>
                 </div>
                 <img src={JoinTeam} alt="Join Team" />
             </div>
+            {isModalOpen && (
+                <div className='modal-form'>
+                    <div className='modal-content-form' onClick={(e) => e.stopPropagation()}>
+                        <Button className='close-modal-form' onClick={handleCloseModal}>
+                            X
+                        </Button>
+                        <form onSubmit={handleSubmit}>
+                            <label htmlFor="">Linkedin</label>
+                            <input type="text" placeholder='Linkedin/yourprofile' />
+                            <label htmlFor="">Github</label>
+                            <input type="text" placeholder='Github/yourprofile' />
+                            <label htmlFor="">Email</label>
+                            <input type="email" placeholder='your.email@example.com' />
+                            <textarea placeholder='Tell us about yourself'></textarea>
+                        </form>
+                        <p></p>
+                        <Button buttonStyle='secondary'>send contact form</Button>
+                    </div>
+                </div>
+            )}
         </div>
         </>
     );

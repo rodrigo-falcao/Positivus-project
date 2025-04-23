@@ -12,22 +12,26 @@ import iconLinkedin from '../../assets/social-Icon/icon-linkedin.svg';
 import iconTwitter from '../../assets/social-Icon/icon-twitter.svg';
 
 const Footer = () => {
+    // Scrolls the window to the top smoothly
+    const handleScrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
     return (
         <footer className="container footer-container">
             <div className="header-footer d-flex al-center jc-space-between">
-                <Link to='/'> <img src={ImgLogo} alt="Logo" /></Link>
+                <Link to='/' onClick={handleScrollToTop}> <img src={ImgLogo} alt="Logo" /></Link>
                 <ul className="footer-list d-flex al-center">
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/aboutus'>About Us</Link></li>
-                    <li><Link to='/services'>Services</Link></li>
-                    <li><Link to='/usecases'>Use Cases</Link></li>
-                    <li><Link to='/pricing'>Pricing</Link></li>
-                    <li><Link to='/blog'>Blog</Link></li>
+                    <li><Link to='/' onClick={handleScrollToTop}>Home</Link></li>
+                    <li><Link to='/aboutus' onClick={handleScrollToTop}>About Us</Link></li>
+                    <li><Link to='/services' onClick={handleScrollToTop}>Services</Link></li>
+                    <li><Link to='/usecases' onClick={handleScrollToTop}>Use Cases</Link></li>
+                    <li><Link to='/pricing' onClick={handleScrollToTop}>Pricing</Link></li>
+                    <li><Link to='/blog' onClick={handleScrollToTop}>Blog</Link></li>
                 </ul>
                 <ul className="social-list d-flex al-center">
-                    <li><a href="https://linkedin.com"><img src={iconLinkedin} alt="LinkedIn" /></a></li>
-                    <li><a href="https://facebook.com"><img src={iconFacebook} alt="Facebook" /></a></li>
-                    <li><a href="https://twitter.com"><img src={iconTwitter} alt="Twitter" /></a></li>
+                    <li><a href="https://google.com" target='_blank'><img src={iconLinkedin} alt="LinkedIn" /></a></li>
+                    <li><a href="https://google.com" target='_blank'><img src={iconFacebook} alt="Facebook" /></a></li>
+                    <li><a href="https://google.com" target='_blank'><img src={iconTwitter} alt="Twitter" /></a></li>
                 </ul>
             </div> 
             <div className="footer-contact d-flex al-center jc-space-between">

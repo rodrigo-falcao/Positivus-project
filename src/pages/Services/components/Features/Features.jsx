@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // ASSETS
 import './Features.scss';
@@ -85,7 +84,7 @@ const Features = () => {
                         we help your business rank higher in search results, 
                         driving more organic traffic and potential customers.
                     </p>
-                    <Button buttonStyle='primary'>Boost My Rankings</Button>
+                    <Button buttonStyle='primary'><Link to='/blog'>Boost My Rankings</Link></Button>
                 </div>
             </div>
         </div>
