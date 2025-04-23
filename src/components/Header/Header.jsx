@@ -79,8 +79,10 @@ function Header() {
                         <li><Link to='/usecases' onClick={() => { closeMenu(); handleScrollToTop(); }}>Use Cases</Link></li>
                         <li><Link to='/pricing' onClick={() => { closeMenu(); handleScrollToTop(); }}>Pricing</Link></li>
                         <li><Link to='/blog' onClick={() => { closeMenu(); handleScrollToTop(); }}>Blog</Link></li>
-                        <Button to='/pricing' buttonStyle='primary' >
-                            Request a quote
+                        <Button buttonStyle='primary'>
+                            <Link to='/pricing'>
+                                Request a quote
+                            </Link>
                         </Button>
                     </ul> 
                 </nav>

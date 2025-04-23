@@ -79,46 +79,48 @@ const Testimonials = () => {
                 to Learn More about Our Digital Marketing Services.
             </p>
         </div>
-        <div className='container testimonials-carousel'>
-            <div
-                className="carousel"
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
-            >
-                {testimonials.map((testimonial, index) => (
-                    <div key={index} className="carousel-item">
-                        <div className="carousel-text">
-                            <p>{testimonial.text}</p>
+        <div className='container'>
+            <div className='testimonials-carousel'>
+                <div
+                    className="carousel"
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
+                    {testimonials.map((testimonial, index) => (
+                        <div key={index} className="carousel-item">
+                            <div className="carousel-text">
+                                <p>{testimonial.text}</p>
+                            </div>
+                            <div className="carousel-name">
+                                <h4>{testimonial.name}</h4>
+                                <p>{testimonial.position}</p>
+                            </div>
                         </div>
-                        <div className="carousel-name">
-                            <h4>{testimonial.name}</h4>
-                            <p>{testimonial.position}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
-            <div className="carousel-controls">
-                <button className="prev" onClick={handlePrev}>
-                    <img src={Arrowgren} alt="Arrow Green" />
-                </button>
-                <div className="carousel-indicators">
-                    {testimonials.map((_, index) => (
-                        <span
-                            key={index}
-                            className={`indicator ${
-                                index === currentIndex ? "active" : ""
-                            }`}
-                            onClick={() => setCurrentIndex(index)}
-                        >
-                            <img src={ComandCarousel} alt="" />
-                        </span>
                     ))}
                 </div>
-                <button className="next" onClick={handleNext}>
-                    <img src={Arrowgren} alt="Arrow Green" />
-                </button>
+                <div className="carousel-controls">
+                    <button className="prev" onClick={handlePrev}>
+                        <img src={Arrowgren} alt="Arrow Green" />
+                    </button>
+                    <div className="carousel-indicators">
+                        {testimonials.map((_, index) => (
+                            <span
+                                key={index}
+                                className={`indicator ${
+                                    index === currentIndex ? "active" : ""
+                                }`}
+                                onClick={() => setCurrentIndex(index)}
+                            >
+                                <img src={ComandCarousel} alt="" />
+                            </span>
+                        ))}
+                    </div>
+                    <button className="next" onClick={handleNext}>
+                        <img src={Arrowgren} alt="Arrow Green" />
+                    </button>
+                </div>
             </div>
         </div>
         </>

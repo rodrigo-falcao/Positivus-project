@@ -72,12 +72,16 @@
             text-align: center;
             padding: 20px 0; 
             min-height: 200px;
-
+            transition: all 0.3s ease;
             h3 {
                 font-size: 40px;
             }
             p {
                 font-size: 20px;
+            }
+            &:hover {
+                background-color: main.$secondary-color;
+                transition: all 0.3s ease, color 0.3s ease;
             }
         }
     }

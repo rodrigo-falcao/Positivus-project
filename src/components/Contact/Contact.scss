@@ -96,7 +96,21 @@
         max-width: 30%;
     }
 }
+.success-message-container {
+    height: 20px; 
+    margin-top: 10px; 
+    text-align: center; 
+}
+.success-message {
+    color: main.$terciary-color;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
 
+.success-message-container:not(:has(.success-message)) {
+    visibility: hidden;
+}
 @media (max-width: 768px) {
     .contact-container {
         width: 100%;

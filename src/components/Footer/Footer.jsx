@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 // COMPONENTS
 import Button from '../Button/Button';
@@ -15,6 +15,25 @@ const Footer = () => {
     // Scrolls the window to the top smoothly
     const handleScrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+    const [email, setEmail] = useState('');
+    const [isSending, setIsSending] = useState(false);
+    const [isSent, setIsSent] = useState(false);
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setIsSending(true);
+        setIsSent(false);
+        // Simulate sending the email
+        setTimeout(() => {
+            setIsSending(false);
+            setIsSent(true);
+            // Clear the email field
+            setEmail('');
+        }, 1500);
     };
     return (
         <footer className="container footer-container">
@@ -42,10 +61,21 @@ const Footer = () => {
                     <p>Address: 1234 Main St<br/>
                     Moonstone City, Stardust State 12345</p>
                 </div>
-                <div className='input-footer d-flex al-center jc-space-around'>
-                    <input type="email" placeholder="Email" />
-                    <Button buttonStyle='terciary btn-footer' type="submit">Subscribe to news</Button>
-                </div>
+                <form className='input-footer d-flex al-center jc-space-around' onSubmit={handleSubmit}>
+                    <input 
+                        type="email" 
+                        placeholder="Email" 
+                        value={email}
+                        onChange={handleEmailChange}
+                        required
+                    />
+                    <Button buttonStyle='terciary btn-footer' type="submit" disabled={isSending}>
+                        {isSending ? 'Subscribing...' : 'Subscribe to news'}
+                    </Button>
+                </form>
+            </div>
+            <div className="footer-message">
+                {isSent && <p className="success-message-footer">Subscribed successfully!</p>}
             </div>
             <div className="copy-footer d-flex al-center jc-start">
                 <p>© 2025 Positivus. All rights reserved.</p>

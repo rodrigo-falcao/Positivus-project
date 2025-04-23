@@ -22,7 +22,6 @@ const Awards = () => {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here
         console.log('Form submitted!');
         handleCloseModal();
     }
@@ -120,15 +119,15 @@ const Awards = () => {
                         </Button>
                         <form onSubmit={handleSubmit}>
                             <label htmlFor="">Linkedin</label>
-                            <input type="text" placeholder='Linkedin/yourprofile' />
+                            <input type="text" placeholder='linkedin.com/yourprofile' required/>
                             <label htmlFor="">Github</label>
-                            <input type="text" placeholder='Github/yourprofile' />
+                            <input type="text" placeholder='github.com/yourprofile' required/>
                             <label htmlFor="">Email</label>
-                            <input type="email" placeholder='your.email@example.com' />
-                            <textarea placeholder='Tell us about yourself'></textarea>
+                            <input type="email" placeholder='your.email@example.com' required/>
+                            <textarea placeholder='Tell us about yourself (Optional)'></textarea>
                         </form>
                         <p></p>
-                        <Button buttonStyle='secondary'>send contact form</Button>
+                        <Button buttonStyle='secondary' onClick={handleCloseModal}>send contact form</Button>
                     </div>
                 </div>
             )}
