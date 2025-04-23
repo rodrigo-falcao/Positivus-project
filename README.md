@@ -1,4 +1,5 @@
-# 🚀 Positivus Project - Estudo Prático
+
+# 🚀 Positivus Project <img src="https://github.com/user-attachments/assets/8a6f10f8-15b0-4537-b85e-784c00c105af" alt="Screenshot do projeto"> <br/>
 
 <img alt="React" src="https://img.shields.io/badge/React-18.2.0-blue?style=for-the-badge&amp;logo=react">
 
