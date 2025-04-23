@@ -88,5 +88,5 @@ Durante o desenvolvimento deste projeto, foram consolidados os seguintes conceit
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="" alt="Screenshot do projeto">
+  <img src="https://github.com/user-attachments/assets/a274cbfa-fa5e-44bc-81a9-b3cc7c6170d7" alt="Screenshot do projeto">
 </p>
