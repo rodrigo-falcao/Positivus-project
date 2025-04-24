@@ -121,6 +121,11 @@
             a {
                 color: main.$primary-color;
             }
+            button {
+                a {
+                    color: main.$terciary-color;
+                }
+            }
         }
     }
 }

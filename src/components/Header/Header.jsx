@@ -80,7 +80,7 @@ function Header() {
                         <li><Link to='/pricing' onClick={() => { closeMenu(); handleScrollToTop(); }}>Pricing</Link></li>
                         <li><Link to='/blog' onClick={() => { closeMenu(); handleScrollToTop(); }}>Blog</Link></li>
                         <Button buttonStyle='primary'>
-                            <Link to='/pricing'>
+                            <Link to='/pricing' onClick={() => { closeMenu(); handleScrollToTop(); }}>
                                 Request a quote
                             </Link>
                         </Button>
