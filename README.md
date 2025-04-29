@@ -7,7 +7,7 @@
 
 ## 🌍 Acesso ao Projeto
 
-🔗 [Clique aqui para acessar](https://todo-typescript-wheat.vercel.app/)
+🔗 [Clique aqui para acessar](https://positivus-project-flame.vercel.app/)
 
 ## 📱 Descrição do Projeto
 
