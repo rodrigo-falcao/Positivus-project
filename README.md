@@ -1,9 +1,9 @@
 
 # 🚀 Positivus Project <img src="https://github.com/user-attachments/assets/8a6f10f8-15b0-4537-b85e-784c00c105af" alt="Screenshot do projeto"> <br/>
 
-<img alt="React" src="https://img.shields.io/badge/React-18.2.0-blue?style=for-the-badge&amp;logo=react">
-
-<img alt="Status" src="https://img.shields.io/badge/Status-Finalizado-brightgreen?style=for-the-badge">
+![status](https://img.shields.io/badge/status-finalizado-green)
+![React](https://img.shields.io/badge/React-18.x-blue)
+![Vite](https://img.shields.io/badge/Vite-5.x-purple)
 
 ## 🌍 Acesso ao Projeto
 
